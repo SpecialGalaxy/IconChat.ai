@@ -6,7 +6,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #0f172a, #020617);
+  background: linear-gradient(135deg, #020617, #0f172a);
   color: white;
   min-height: 100vh;
   display: flex;
@@ -23,97 +23,65 @@ header {
   margin-bottom: 10px;
 }
 
-header h1 {
-  font-size: 2rem;
+h1 {
   color: #38bdf8;
-}
-
-header p {
-  opacity: 0.8;
 }
 
 main {
   flex: 1;
-  display: flex;
-  flex-direction: column;
   padding: 20px;
 }
 
-.chat-box {
-  flex: 1;
+.chat {
   background: #020617;
+  padding: 20px;
   border-radius: 12px;
-  padding: 15px;
-  overflow-y: auto;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  min-height: 140px;
 }
 
-.ai-msg, .user-msg {
-  padding: 10px 14px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  max-width: 80%;
-}
-
-.ai-msg {
+.message {
+  display: none;
   background: #0ea5e9;
   color: black;
+  padding: 15px;
+  border-radius: 10px;
 }
 
-.user-msg {
-  background: #334155;
-  margin-left: auto;
+.message.show {
+  display: block;
 }
 
-.input-area {
-  display: flex;
-  gap: 10px;
-}
-
-.input-area input {
-  flex: 1;
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-}
-
-.input-area button {
-  padding: 12px 18px;
-  border: none;
-  border-radius: 8px;
-  background: #38bdf8;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.input-area button:hover {
-  background: #0ea5e9;
-}
-
+/* Button area */
 .buttons {
   display: flex;
   gap: 10px;
-  margin-top: 10px;
 }
 
-.buttons button {
+.buttons a {
   flex: 1;
-  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px;
   border-radius: 8px;
-  border: none;
   background: #1e293b;
   color: white;
-  cursor: pointer;
+  font-weight: bold;
 }
 
-.buttons button:hover {
+.buttons a:hover {
   background: #334155;
+}
+
+/* CSS MAGIC – Button Works */
+#research:target,
+#summary:target,
+#explain:target {
+  display: block;
 }
 
 footer {
   text-align: center;
   padding: 10px;
-  font-size: 0.9rem;
   opacity: 0.6;
 }
