@@ -2,39 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Iconchat.ai – Smart AI Assistant</title>
+  <title>Iconchat.ai – AI Assistant</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <img src="logo.png" alt="Iconchat.ai Logo" class="logo">
+  <img src="logo.png" class="logo">
   <h1>Iconchat.ai</h1>
-  <p>Your intelligent research assistant</p>
+  <p>Your smart AI research assistant</p>
 </header>
 
 <main>
-  <div class="chat-box" id="chatBox">
-    <div class="ai-msg">👋 Hi! I’m Iconchat.ai. Ask me anything.</div>
+
+<div class="chat">
+  <div id="welcome" class="message show">
+    👋 Hello! I’m Iconchat.ai. Choose an option below.
   </div>
 
-  <div class="input-area">
-    <input type="text" id="userInput" placeholder="Ask Iconchat.ai..." />
-    <button onclick="sendMessage()">Send</button>
+  <div id="research" class="message">
+    🔍 I research information from trusted sources and explain clearly.
   </div>
 
-  <div class="buttons">
-    <button onclick="quickAsk('Research this topic')">🔍 Research</button>
-    <button onclick="quickAsk('Summarize this')">📄 Summarize</button>
-    <button onclick="quickAsk('Explain simply')">💡 Explain</button>
+  <div id="summary" class="message">
+    📄 I summarize long content into simple points.
   </div>
+
+  <div id="explain" class="message">
+    💡 I explain topics in a friendly and easy way.
+  </div>
+</div>
+
+<div class="buttons">
+  <a href="#research">🔍 Research</a>
+  <a href="#summary">📄 Summarize</a>
+  <a href="#explain">💡 Explain</a>
+</div>
+
 </main>
 
 <footer>
   © 2026 Iconchat.ai • Professional AI Assistant
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
